@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'From the welcome page:', type: :feature do
-  describe 'searching for an ingredient' do
+  describe 'searching for an ingredient', :vcr do
     before(:each) do
       visit '/'
       fill_in 'q', with: 'sweet potatoes'
