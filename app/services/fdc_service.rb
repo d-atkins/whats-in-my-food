@@ -1,7 +1,7 @@
 class FdcService
   def get_food_data(search_params)
     response = conn.get("/fdc/v1/search?ingredients=#{search_params}")
-    JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)[:foods]
   end
 
   private
