@@ -10,7 +10,7 @@ describe 'From the welcome page:', type: :feature do
 
     it 'returns a list of foods containing that ingredient' do
       expect(current_path).to eq(foods_path)
-      expect(page).to have_css('#search_result', count: 50)
+      expect(page).to have_css('#search_result', count: 10)
       within('#search_result', match: :first) do
         expected = {
           description: 'REAL VEGETABLE CHIPS',
