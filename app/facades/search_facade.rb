@@ -6,7 +6,7 @@ class SearchFacade
   end
 
   def get_foods
-    food_data = @service.get_foood_data(@search_params)
+    food_data = @service.get_food_data(@search_params)
     @foods ||= food_data.map do |food_info|
       Food.new(food_info)
     end
