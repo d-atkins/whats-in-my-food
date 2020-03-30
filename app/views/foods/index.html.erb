@@ -1,8 +1,10 @@
 <h1>Search Results</h1>
 <% @search_facade.get_foods.each do |food| %>
-  <h2><%= food.description %></h2>
-  <p>GTIN/UPC code: <%= food.code %></p>
-  <p>Brand Owner: <%= food.brand_owner %></p>
-  <p>Ingredients: <%= food.ingredients %></p>
+  <section id='search_result'>
+    <h2 id='description'><%= food.description %></h2>
+    <p id='gtinupc_code'>GTIN/UPC code: <%= food.code %></p>
+    <p id='brand_owner'>Brand Owner: <%= food.brand_owner %></p>
+    <p id='ingredients'>Ingredients: <%= food.ingredients %></p>
+  </section>
   <br>
 <% end %>
